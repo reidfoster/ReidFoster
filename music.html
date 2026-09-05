@@ -57,9 +57,9 @@
       <div class="piece-note">Recorded 2025 &mdash; watch below</div>
     </div>
     <div class="piece">
-      <div class="piece-composer">Chopin</div>
-      <div class="piece-title">Waltz in A minor, B. 150</div>
-      <div class="piece-note">Recorded 2023 &mdash; watch below</div>
+      <div class="piece-composer">Nicholas Hooper</div>
+      <div class="piece-title">Professor Umbridge</div>
+      <div class="piece-note">From Harry Potter and the Order of the Phoenix &mdash; watch below</div>
     </div>
   </div>
 </div>
@@ -71,25 +71,28 @@
   <p class="section-sub">A few recordings from the last few years. More on YouTube.</p>
   <div class="video-grid">
     <div class="video-card featured">
-      <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/leg_8zzPYs4" title="Chopin: Nocturne Op. 27 No. 2 &mdash; 2026 MTAC Chopin Festival" allowfullscreen loading="lazy"></iframe>
+      <div class="video-frame" data-video-id="leg_8zzPYs4">
+        <img src="https://img.youtube.com/vi/leg_8zzPYs4/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/leg_8zzPYs4/hqdefault.jpg';" alt="Chopin: Nocturne Op. 27 No. 2 &mdash; 2026 MTAC Chopin Festival">
+        <button class="play-btn" onclick="playVideo(this)" aria-label="Play video">&#9658;</button>
       </div>
       <div class="video-title" style="text-align: center;">Chopin &mdash; Nocturne Op. 27 No. 2</div>
       <div class="video-meta" style="text-align: center;">1st place, Nocturne category &mdash; 2026 MTAC San Diego Chopin Festival</div>
     </div>
     <div class="video-card">
-      <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/PaJC6UG4rIw" title="Debussy: Arabesque No. 1" allowfullscreen loading="lazy"></iframe>
+      <div class="video-frame" data-video-id="PaJC6UG4rIw">
+        <img src="https://img.youtube.com/vi/PaJC6UG4rIw/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/PaJC6UG4rIw/hqdefault.jpg';" alt="Debussy: Arabesque No. 1">
+        <button class="play-btn" onclick="playVideo(this)" aria-label="Play video">&#9658;</button>
       </div>
       <div class="video-title">Debussy &mdash; Arabesque No. 1</div>
       <div class="video-meta">Performed August 2025</div>
     </div>
     <div class="video-card">
-      <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/BfzJcaA8mOs" title="Chopin: Waltz in A minor" allowfullscreen loading="lazy"></iframe>
+      <div class="video-frame" data-video-id="rtkZ6tN2Hug">
+        <img src="https://img.youtube.com/vi/rtkZ6tN2Hug/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/rtkZ6tN2Hug/hqdefault.jpg';" alt="Professor Umbridge, from Harry Potter and the Order of the Phoenix">
+        <button class="play-btn" onclick="playVideo(this)" aria-label="Play video">&#9658;</button>
       </div>
-      <div class="video-title">Chopin &mdash; Waltz in A minor</div>
-      <div class="video-meta">Performed November 2023</div>
+      <div class="video-title">Professor Umbridge</div>
+      <div class="video-meta">Nicholas Hooper, from Harry Potter and the Order of the Phoenix</div>
     </div>
   </div>
   <div class="archive-note">
@@ -106,5 +109,12 @@
   </div>
 </footer>
 
+<script>
+function playVideo(btn) {
+  var frame = btn.closest('.video-frame');
+  var id = frame.getAttribute('data-video-id');
+  frame.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1" title="Video player" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+}
+</script>
 </body>
 </html>
