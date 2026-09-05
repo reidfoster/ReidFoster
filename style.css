@@ -116,8 +116,13 @@ nav {
   color: var(--ink-soft);
   letter-spacing: 0.02em;
   background: transparent;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.2s, color 0.2s;
 }
+.tag:hover { border-color: var(--ink-soft); color: var(--ink); }
 .tag.accent { background: var(--accent); color: white; border-color: var(--accent); }
+.tag.accent:hover { color: white; border-color: var(--accent); opacity: 0.9; }
 
 .hero-visual {
   padding: 2.5rem 3rem;
